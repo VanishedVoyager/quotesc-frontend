@@ -1,0 +1,30 @@
+.homeSpan{
+  cursor: pointer;
+}
+
+:host {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.main{
+  flex-grow: 1;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.add-btn{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 30px;
+}
+
+.flex-outlet{
+  padding: 20px;
+}

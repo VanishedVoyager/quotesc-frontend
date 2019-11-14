@@ -1,0 +1,27 @@
+<h3>Add a new Quote</h3>
+<form>
+  <mat-form-field>
+    <mat-label>Text</mat-label>
+    <textarea matInput [(ngModel)]="text" name="text"></textarea>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+      <mat-label>Quoted Persons</mat-label>
+      <mat-select multiple>
+        <mat-option *ngFor="let person of persons" [value]="person">{{person.firstName}} {{person.lastName}}</mat-option>
+      </mat-select>
+  </mat-form-field>
+  <br>
+  <div>
+    <mat-label>Braininess</mat-label>
+    <mat-slider min="0" max="10" step="1" value="5" style="margin: 5px;" [thumbLabel]="true" (change)="onSliderChange()"></mat-slider>
+  </div>
+  <br>
+  <button mat-button color="primary" (click)="saveQuote()" cdkFocusInitial>Save</button>
+</form>

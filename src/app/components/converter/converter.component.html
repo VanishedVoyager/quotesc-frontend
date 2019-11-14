@@ -1,0 +1,6 @@
+<div>
+    <mat-label>Choose .csv File</mat-label>
+    <input type="file" (change)="fileChanged($event.target.files)">
+<br>
+      <button (click)="convert()">Convert</button>
+</div>

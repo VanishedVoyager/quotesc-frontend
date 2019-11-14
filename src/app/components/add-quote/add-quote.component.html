@@ -20,7 +20,10 @@
   <br>
   <div>
     <mat-label>Braininess</mat-label>
-    <mat-slider min="0" max="10" step="1" value="5" style="margin: 5px;" [thumbLabel]="true" (change)="onSliderChange()"></mat-slider>
+    <mat-slider
+      min="1" max="10" step="1" value="5" style="margin: 5px;"
+      [thumbLabel]="true" (change)="onSliderChange()" [(ngModel)]="braininess" name="braininess"></mat-slider>
+    <mat-error *ngIf="braininess==0" color="warn">Braininess must not be 0</mat-error>
   </div>
   <br>
   <button mat-button color="primary" (click)="saveQuote()" cdkFocusInitial>Save</button>

@@ -13,6 +13,7 @@ export class AddQuoteComponent implements OnInit {
   text: string;
   quotedPersons: Person[];
   date: Date;
+  braininess: number = 5;
 
   persons: Person[] = [
     {
@@ -52,6 +53,10 @@ export class AddQuoteComponent implements OnInit {
   }
 
   cancel(){
+
+  }
+
+  onSliderChange(){
 
   }
 

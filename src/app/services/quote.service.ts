@@ -14,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class QuoteService {
-  URL = 'http://192.168.43.236:8182';
+  URL = 'http://192.168.99.100:8081';
 
   constructor(private http: HttpClient) { }
 

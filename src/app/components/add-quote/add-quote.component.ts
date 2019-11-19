@@ -48,7 +48,8 @@ export class AddQuoteComponent implements OnInit {
       id: null,
       text: this.text,
       quotedPersons: this.quotedPersons,
-      quoter: null
+      quoter: null,
+      date: this.date
     });
   }
 

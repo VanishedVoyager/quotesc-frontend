@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExploreComponent implements OnInit {
 
+  icon: String = "add";
   constructor() { }
 
   ngOnInit() {

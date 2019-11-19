@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from 'src/app/model/quote';
 import { QuoteService } from 'src/app/services/quote.service';
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-quote-list',
@@ -20,7 +21,8 @@ export class QuoteListComponent implements OnInit {
       quoter: {
         id: 1,
         sub: 'quoter'
-      }
+      },
+      date: new Date('01.01.1970')
   };
   quotes: Quote[] = [];
   noError = true;

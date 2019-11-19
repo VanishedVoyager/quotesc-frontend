@@ -1,13 +1,25 @@
-<div *ngIf="noError">
-  <mat-card class="quoteCard" *ngFor="let quote of quotes">
-    <mat-card-header>{{quote.text}}</mat-card-header>
-    <mat-card-content>
+<mat-grid-list *ngIf="noError" cols="4" rowHeight="2:1" gutterSize="10px">
+  <mat-grid-tile *ngFor="let quote of quotes" class="quote-tile">
+    <div class="quote-div">
+      <h3>{{quote.text}}</h3>
       <div *ngFor="let person of quote.quotedPersons">
-        {{person.firstName}} {{person.lastName}}
+        <p class="quoted-paragraph">
+          - {{person.firstName}} {{person.lastName}}
+          <br>
+          {{ quote.date | date:'dd.MM.yyyy' }}
+        </p>
       </div>
-    </mat-card-content>
-  </mat-card>
-</div>
+      <!-- <mat-card tabindex="0" class="quote-card">
+        <mat-card-header>{{quote.text}}</mat-card-header>
+        <mat-card-content>
+          <div *ngFor="let person of quote.quotedPersons">
+            {{person.firstName}} {{person.lastName}}
+          </div>
+        </mat-card-content>
+      </mat-card> -->
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
 <div *ngIf="!noError">
   Could not retrtieve quotes
 </div>

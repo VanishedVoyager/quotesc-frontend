@@ -5,5 +5,6 @@ export interface Quote {
   id: number;
   quotedPersons: Person[];
   quoter: Quoter;
-  text: string
+  text: string;
+  date: Date;
 }

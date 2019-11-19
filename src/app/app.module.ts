@@ -13,7 +13,6 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
 import { ExploreComponent } from './components/explore/explore.component';
 import { MatCardModule } from '@angular/material/card';
 import { QuoteService } from './services/quote.service';
-import { ConverterComponent } from './components/converter/converter.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
 import { MatButtonModule} from '@angular/material/button';
@@ -27,6 +26,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,6 @@ import { MatSliderModule } from '@angular/material/slider';
     QuoteListComponent,
     StatisticsComponent,
     ExploreComponent,
-    ConverterComponent,
     QuoteDialogComponent,
     AddQuoteComponent
   ],
@@ -57,7 +57,9 @@ import { MatSliderModule } from '@angular/material/slider';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSliderModule
+    MatSliderModule,
+    MatGridListModule,
+    GoogleChartsModule
   ],
   entryComponents: [QuoteDialogComponent],
   providers: [ QuoteService, HttpClient ],

@@ -4,7 +4,6 @@ import { HomeComponent } from './components/home/home.component';
 import { QuoteListComponent } from './components/quote-list/quote-list.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { ExploreComponent } from './components/explore/explore.component';
-import { ConverterComponent } from './components/converter/converter.component';
 import { QuoteDialogComponent } from './components/quote-dialog/quote-dialog.component';
 import { AddQuoteComponent } from './components/add-quote/add-quote.component';
 
@@ -30,10 +29,6 @@ const routes: Routes = [
   {
     path: 'explore',
     component: ExploreComponent
-  },
-  {
-    path: 'converter',
-    component: ConverterComponent
   },
   {
     path: 'add',
